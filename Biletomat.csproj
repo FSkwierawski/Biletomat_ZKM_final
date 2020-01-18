@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40357D13-6A54-4BA5-B1F0-F4CD56794DE9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Biletomat</RootNamespace>
+    <AssemblyName>Biletomat</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SeasonalTicketStepOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeasonalTicketStepOne.Designer.cs">
+      <DependentUpon>SeasonalTicketStepOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SeasonalTicketStepTwo1Month.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeasonalTicketStepTwo1Month.Designer.cs">
+      <DependentUpon>SeasonalTicketStepTwo1Month.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SeasonalTicketStepTwo30Days.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeasonalTicketStepTwo30Days.Designer.cs">
+      <DependentUpon>SeasonalTicketStepTwo30Days.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SeasonalTicketStepTwoSingle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SeasonalTicketStepTwoSingle.Designer.cs">
+      <DependentUpon>SeasonalTicketStepTwoSingle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tickets.Designer.cs">
+      <DependentUpon>Tickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeasonalTicketStepTwoViewModel.cs" />
+    <Compile Include="TicketViewModel.cs" />
+    <EmbeddedResource Include="Forms\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeasonalTicketStepOne.resx">
+      <DependentUpon>SeasonalTicketStepOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeasonalTicketStepTwo1Month.resx">
+      <DependentUpon>SeasonalTicketStepTwo1Month.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeasonalTicketStepTwo30Days.resx">
+      <DependentUpon>SeasonalTicketStepTwo30Days.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SeasonalTicketStepTwoSingle.resx">
+      <DependentUpon>SeasonalTicketStepTwoSingle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tickets.resx">
+      <DependentUpon>Tickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1godzinny_normalny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1godzinny_specjalne.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1godzinny_specjalne_ulgowy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1godzinny_ulgowy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24godzinny_normalny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24godzinny_ulgowy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jednorazowy_normalny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\niebieski ciemny 72ppi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_ciemnyV2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kup_button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cofnij_button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bilety_okresowe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bilety_jednorazowe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bilety_okresowe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bilety_jednorazowe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zwykle_gdynia_jasny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zwykle_gdynia_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nocne_gdynia_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gminy_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sieci_kom_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rumia_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cofnij_button_small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miesieczny_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30_dniowy_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semestralny_4_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semestralny_5_ciemny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normalny_pnpt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\okaziciel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ulgowy_pnnd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ulgowy_pnpt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normalny_pnnd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
